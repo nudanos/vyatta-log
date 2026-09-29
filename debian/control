@@ -1,9 +1,8 @@
 Source: vyatta-log
-Section: contrib/net
+Section: net
 Priority: optional
-Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
-Build-Depends:
- debhelper (>= 9.0.0),
+Maintainer: NuDanOS Maintainers <jon@fernandez.tech>
+Build-Depends: debhelper-compat (= 13),
  dh-python,
  dh-yang,
  python3-all,
@@ -11,7 +10,10 @@ Build-Depends:
  python3-pytest,
  python3-setuptools,
  python3-tz
-Standards-Version: 3.9.8
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/nudanos/vyatta-log.git
+Vcs-Browser: https://github.com/nudanos/vyatta-log
 
 Package: python3-rfc3339-to-systemd-time
 Architecture: all
@@ -59,7 +61,6 @@ Architecture: all
 Depends: ${misc:Depends}, ${yang:Depends}, auditd, vyatta-system
 Description: Vyatta show log audit yang
  Yang module to show audit logs
-
 
 Package: vyatta-op-show-log-auth-v1-yang
 Architecture: all
